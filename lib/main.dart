@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 100.0,
-                backgroundImage: AssetImage('assets/images/telegramLogo.jpg'),
+                backgroundImage: AssetImage('assets/images/logo.jpg'),
               ),
               SizedBox(
                 height: 30.0,
