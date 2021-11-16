@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,41 +12,73 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.blue.shade800,
-        body: SafeArea(
-            child: Column(
-          children: [
-            const Align(
-              alignment: Alignment.topCenter,
-              child: CircleAvatar(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.blue.shade800,
+          body: SafeArea(
+              child: Column(
+            children: [
+              CircleAvatar(
+                radius: 100.0,
                 backgroundImage: AssetImage('assets/images/telegramLogo.jpg'),
               ),
-            ),
-            const Spacer(
-              flex: 2,
-            ),
-            Container(
-              padding: const EdgeInsets.all(8.0),
-              decoration: const BoxDecoration(
-                color: Colors.white10,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20.0),
-                  bottomRight: Radius.circular(20.0),
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                padding: EdgeInsets.all(20.0),
+                margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 25.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20.0),
+                    bottomRight: Radius.circular(20.0),
+                    topLeft: Radius.circular(20.0),
+                    topRight: Radius.circular(20.0),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      'email address',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.blue.shade200,
+                      ),
+                    )
+                  ],
                 ),
               ),
-              child: Row(
-                children: const [
-                  Text('email address'),
-                ],
+              Container(
+                  padding: EdgeInsets.all(20.0),
+                  margin:
+                      EdgeInsets.symmetric(vertical: 15.0, horizontal: 25.0),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20.0),
+                        bottomRight: Radius.circular(20.0),
+                        topLeft: Radius.circular(20.0),
+                        topRight: Radius.circular(20.0),
+                      )),
+                  child: Row(
+                    children: [
+                      Text(
+                        'password',
+                        style: TextStyle(
+                            fontSize: 20.0, color: Colors.blue.shade200),
+                      ),
+                    ],
+                  )),
+              SizedBox(
+                height: 10.0,
               ),
-            ),
-          ],
-        )),
-      ),
-    );
+              Text(
+                'Forgot Password?',
+                style: TextStyle(fontSize: 20.0, color: Colors.white),
+              )
+            ],
+          )),
+        ));
   }
 }
