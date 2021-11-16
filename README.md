@@ -5,7 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 Adding Image 
-![screenshot] (images/SignUpP.png)
+![screenshot](images/SignUpP.png)
 
 This project is a starting point for the project this week.
 
